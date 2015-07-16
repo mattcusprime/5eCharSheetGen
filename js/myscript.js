@@ -15,12 +15,12 @@ function makeMeScrollToDefinedTarget(strJquerySelectorTarget, numDelayTimer, off
     });
 };
 var coreDataSet = [
-    { "stat": "STR", "score": "10", "modifier": "0" },
-    { "stat": "DEX", "score": "10", "modifier": "0" },
-    { "stat": "CON", "score": "10", "modifier": "0" },
-    { "stat": "INT", "score": "12", "modifier": "0" },
-    { "stat": "WIS", "score": "12", "modifier": "0" },
-    { "stat": "CHA", "score": "12", "modifier": "0" }
+    { "stat": "STR", "score": 10, "modifier": "<input id='STRMod' type='text' value='0'></input>" },
+    { "stat": "DEX", "score": 10, "modifier": "<input id='DEXMod' type='text' value='0'></input>" },
+    { "stat": "CON", "score": 10, "modifier": "<input id='CONMod' type='text' value='0'></input>" },
+    { "stat": "INT", "score": 12, "modifier": "<input id='INTMod' type='text' value='0'></input>" },
+    { "stat": "WIS", "score": 12, "modifier": "<input id='WISMod' type='text' value='0'></input>" },
+    { "stat": "CHA", "score": 12, "modifier": "<input id='CHAMod' type='text' value='0'></input>" }
 ]
 var coreTable;
 $('document').ready(function () {
@@ -34,8 +34,13 @@ $('document').ready(function () {
     });
     $('#reRoll').click(function () {
         for (var i = 0; i < coreDataSet.length; i++) {
-            var numNewScore = Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1);
+            var idSelector = '#' + coreDataSet[i].stat + 'Mod';
+            var thisMod = $(idSelector).val();
+            thisMod = Number(thisMod)
+            if (typeof (thisMod) == 'undefined'||thisMod == "") { thisMod == 0 };
+            var numNewScore = Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + thisMod;
             coreDataSet[i].score = numNewScore;
+            coreDataSet[i].modifier = "<input id='" + idSelector.replace('#','') + "' type='text' value='" + thisMod + "'></input>";
         }
         console.log(coreDataSet)
         coreDataTable.clear().rows.add(coreDataSet).draw();
