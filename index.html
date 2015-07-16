@@ -47,7 +47,8 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="javascript:makeMeScrollToDefinedTarget('#stats',50,-100);">Core Stats</a></li>
-                    
+                    <li><a href="javascript:makeMeScrollToDefinedTarget('#skills',50,-100);">Skills</a></li>
+                    <li><a href="javascript:makeMeScrollToDefinedTarget('#tblRacial',50,-100);">Racial</a></li>
                     
                 </ul>
             </div>
@@ -55,33 +56,78 @@
     </nav>
     <hr>
     <div class="page" id="stats">
-        <div class="container-fluid clearThisComponentOnNewGarmentLoad" id="reportsHeader">
-            <button id="reRoll">Roll stats</button>
-            <table id="coreStats" class="display responsive col-md-12 compact cell-border">
+        <div class="container-fluid clearThisComponentOnNewGarmentLoad col-md-12">
+                
+              
+                <table id="coreStats" class="display responsive col-md-6 compact cell-border">
+                    <thead> 
+                        
+                        <tr>
+                            <th>Stat</th>
+                            <th>Score</th>
+                            <th>Modifier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+                </div>
+        <!-- container -->
+        <button id="reRoll" class="col-md-3">Roll</button>
+    </div>
+    <hr>
+    <div class="page" id="skillsDiv">
+        <div class="container-fluid clearThisComponentOnNewGarmentLoad col-md-12">
+            <table id="skills" class="display responsive col-md-6 compact cell-border">
                 <thead>
                     <tr>
-                        <th>Stat</th>
-                        <th>Score</th>
-                        <th>Modifier</th>
+                        <th>Skills</th>
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <tr><td><input type="checkbox" name="Acrobatics" value="Acrobatics">Acrobatics</td></tr>
+                    <tr><td><input type="checkbox" name="Animal Handling" value="Animal Handling">Animal Handling</td></tr>
+                    <tr><td><input type="checkbox" name="Arcana" value="Arcana">Arcana</td></tr>
+                    <tr><td><input type="checkbox" name="Athletics" value="Athletics">Athletics</td></tr>
+                    <tr><td><input type="checkbox" name="Deception" value="Deception">Deception</td></tr>
+                    <tr><td><input type="checkbox" name="History" value="History">History</td></tr>
+                    <tr><td><input type="checkbox" name="Insight" value="Insight">Insight</td></tr>
+                    <tr><td><input type="checkbox" name="Intimidation" value="Intimidation">Intimidation</td></tr>
+                    <tr><td><input type="checkbox" name="Medicine" value="Medicine">Medicine</td></tr>
+                    <tr><td><input type="checkbox" name="Nature" value="Nature">Nature</td></tr>
+                    <tr><td><input type="checkbox" name="Perception" value="Perception">Perception</td></tr>
+                    <tr><td><input type="checkbox" name="Performance" value="Performance">Performance</td></tr>
+                    <tr><td><input type="checkbox" name="Persuasion" value="Persuasion">Persuasion</td></tr>
+                    <tr><td><input type="checkbox" name="Religion" value="Religion">Religion</td></tr>
+                    <tr><td><input type="checkbox" name="Search" value="Search">Search</td></tr>
+                    <tr><td><input type="checkbox" name="Sleight Of Hand" value="Sleight Of Hand">Sleight Of Hand</td></tr>
+                    <tr><td><input type="checkbox" name="Stealth" value="Stealth">Stealth</td></tr>
+                    <tr><td><input type="checkbox" name="Survival" value="Survival">Survival</td></tr>
+
+
+
+
                 </tbody>
 
             </table>
+            <p class="col-md-6"></p>
         </div>
         <!-- container -->
+       
     </div>
-    <div class="page" id="race">
-        <div class="container-fluid clearThisComponentOnNewGarmentLoad" id="reportsHeader">
-            <button id="reRoll">Roll stats</button>
-            <table id="abilities" class="display responsive col-md-12 compact cell-border">
+    <hr>
+    <div class="page" id="racial">
+        <div class="container-fluid clearThisComponentOnNewGarmentLoad col-md-12">
+            <h1 class="col-md-6">Racial</h1>
+
+            <table id="tblRacial" class="display responsive col-md-6 compact cell-border">
                 <thead>
                     <tr>
-                        <th>Stat</th>
-                        <th>Score</th>
-                        <th>Modifier</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -89,8 +135,8 @@
             </table>
         </div>
         <!-- container -->
+        
     </div>
-
-
+    
 </body>
 
