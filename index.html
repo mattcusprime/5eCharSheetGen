@@ -28,8 +28,51 @@
     <script src="DataTables-1.10.7/extensions/Responsive/js/dataTables.responsive.js"></script>
     <script src="DataTables-1.10.7/Plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
     <!--DataTables-->
+    <script src="js/myscript.js"></script>
 </head>
 <body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" id="navTopDiv">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="topLeftNav" class="navbar-brand" href="#navTopDiv">Character Sheet 5e Generator</a>
+
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:makeMeScrollToDefinedTarget('#stats',50,-100);">Core Stats</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="page" id="stats">
+        <div class="container-fluid clearThisComponentOnNewGarmentLoad" id="reportsHeader">
+            <button id="reRoll">Roll stats</button>
+            <table id="coreStats" class="display responsive col-md-12 compact cell-border">
+                <thead>
+                    <tr>
+                        <th>Stat</th>
+                        <th>Score</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+
+            </table>
+        </div>
+        <!-- container -->
+    </div>
 
 
 
