@@ -45,6 +45,8 @@ $('document').ready(function () {
                 numNewScore = numNewScore + arrNumNewScore[j];
             };
             numNewScore = numNewScore - numMinScore;
+            if (numNewScore < 8) { numNewScore = 8 };
+            numNewScore = numNewScore + thisMod;
             coreDataSet[i].score = numNewScore;
             coreDataSet[i].modifier = "<input id='" + idSelector.replace('#','') + "' type='text' value='" + thisMod + "'></input>";
         }
